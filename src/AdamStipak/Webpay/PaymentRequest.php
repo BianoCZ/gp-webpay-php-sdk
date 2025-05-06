@@ -29,7 +29,7 @@ class PaymentRequest {
    * @param string|null $merOrderNumber Order Number. In case it is not specified, it will be used  value $orderNumber It will appear on the bank statement.
    * @param string|null $md Any merchant data.
    */
-  public function __construct (int $orderNumber, float $amount, int $currency, int $depositFlag, string $url, string $merOrderNumber = null, string $md = null) {
+  public function __construct (int $orderNumber, float $amount, int $currency, int $depositFlag, string $url, ?string $merOrderNumber = null, ?string $md = null) {
     $this->params['MERCHANTNUMBER'] = "";
     $this->params['OPERATION'] = 'CREATE_ORDER';
     $this->params['ORDERNUMBER'] = $orderNumber;
